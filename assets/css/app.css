@@ -1,0 +1,85 @@
+@import "variables.css";
+
+.fripixel-crypto-quotation .tokens {
+  list-style: none;
+  margin: 0px;
+  padding: 5px;
+  border: 1px solid var(--gray-light);
+}
+
+.fripixel-crypto-quotation .tokens thead th {
+  background: var(--gray-medium);
+  white-space: nowrap;
+}
+
+.fripixel-crypto-quotation .tokens thead th:first-child {
+  text-align: center;
+  width: 15%;
+}
+
+.fripixel-crypto-quotation .tokens thead th:last-child {
+  text-align: center;
+  width: 15%;
+}
+
+.fripixel-crypto-quotation .tokens tr:nth-child(even) {
+  background-color: var(--gray-lighter);
+}
+
+.fripixel-crypto-quotation .tokens tr td {
+  white-space: nowrap;
+}
+
+.fripixel-crypto-quotation .tokens tr td:first-child {
+  text-align: center;
+}
+
+.fripixel-crypto-quotation .tokens tr td:first-child a {
+  transition: all 0.2s ease;
+  color: var(--pink);
+}
+
+.fripixel-crypto-quotation .tokens tr td:first-child a:hover {
+  color: var(--pink-dark);
+}
+
+.fripixel-crypto-quotation .tokens tr td:last-child {
+  text-align: center;
+}
+
+.fripixel-crypto-quotation .see_more {
+  padding: 5px;
+  font-size: 15px;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.fripixel-crypto-quotation .see_more:hover {
+  color: var(--pink-dark);
+}
+
+.fripixel-crypto-quotation .text-center {
+  text-align: center;
+}
+
+.fripixel-crypto-quotation .down {
+  color: var(--red);
+}
+
+.fripixel-crypto-quotation .down:before {
+  content: "-";
+  position: relative;
+  right: -5px;
+}
+
+.fripixel-crypto-quotation .up {
+  color: var(--green);
+}
+
+.fripixel-crypto-quotation .up:before {
+  content: "+";
+  position: relative;
+  right: -5px;
+}
