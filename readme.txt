@@ -1,5 +1,5 @@
-=== Fripixel Cookie Permission ===
-Contributors: (this should be a list of wordpress.org userid's)
+=== Fripixel Crypto Quotation ===
+Contributors: fripixel
 Donate link: https://bit.ly/3AFaHO6
 Tags: crypto, bitcoin, quotation, currency
 Requires at least: 5.4
@@ -12,7 +12,7 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Fripixel Crypto Quotation plugin, shows a list of crypto quotation values.
 
 == Description ==
-Fripixel Crypto Quotation plugin, shows a list of crypto quotation values.
+Fripixel Crypto Quotation plugin, shows a list of crypto quotation values from Coin Market website.
 
 == Frequently Asked Questions ==
 
