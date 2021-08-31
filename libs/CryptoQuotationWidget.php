@@ -36,13 +36,13 @@ class CryptoQuotationWidget extends WP_Widget
   public function widget($args, $instance)
   {
 
-    echo $args['before_widget'];
+    echo esc_attr($args['before_widget']);
 
     if (!empty($instance['title'])) {
-      echo $args['before_title'] . apply_filters('widget_title', $instance['title']) . $args['after_title'];
+      echo esc_attr($args['before_title'] . apply_filters('widget_title', $instance['title']) . $args['after_title']);
     }
 
-    echo '<div class="textwidget">';
+    echo esc_attr('<div class="textwidget">');
 
     $cryptos = explode(",", $instance['tokens']);
 
@@ -56,9 +56,9 @@ class CryptoQuotationWidget extends WP_Widget
 
     echo wp_kses($html, $this->allowed_html);
 
-    echo '</div>';
+    echo esc_attr('</div>');
 
-    echo $args['after_widget'];
+    echo esc_attr($args['after_widget']);
 
   }
 
@@ -66,12 +66,11 @@ class CryptoQuotationWidget extends WP_Widget
   {
     $title = !empty($instance['title']) ? $instance['title'] : esc_html__('', 'text_domain');
     $tokens  = $instance['tokens'];
-    // var_dump($instance); exit;
     ?>
     <p>
       <label for="title">
           <?php
-            echo esc_html__('Title:', 'text_domain');
+            echo esc_attr('Title:', 'text_domain');
           ?>
       </label>
       <input class="widefat" id="title" name="title" type="text" value="<?php echo esc_attr($title); ?>">
@@ -79,7 +78,7 @@ class CryptoQuotationWidget extends WP_Widget
     <p>
         <label for="tokens">
           <?php
-            echo esc_html__('Tokens (comma separated):', 'text_domain');
+            echo esc_attr('Tokens (comma separated):');
           ?>
         </label>
         <select multiple class="widefat" id="tokens" name="tokens[]">
@@ -92,8 +91,8 @@ class CryptoQuotationWidget extends WP_Widget
             ];
           ?>
           <?php foreach($tokens as $key => $value) { ?>
-          <option value="<?php echo $value; ?>">
-            <?php echo $key; ?>
+          <option value="<?php echo esc_attr($value); ?>">
+            <?php echo esc_attr($key); ?>
           </option>
           <?php } ?>
         </select>
